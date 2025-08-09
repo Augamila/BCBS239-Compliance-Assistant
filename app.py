@@ -1,12 +1,12 @@
+# Add the project's root directory to the Python path
+# This ensures that the 'backend' module can be found
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
+
 import os
 import sys
 import streamlit as st
 import pandas as pd
 from typing import List
-
-# Add the project's root directory to the Python path
-# This ensures that the 'backend' module can be found
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 
 from backend.generators import (
     LLMConfig, generate_risk_assessment, generate_test_script, generate_report
